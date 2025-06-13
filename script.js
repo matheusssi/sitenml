@@ -6,7 +6,7 @@ document.getElementById('start-btn').addEventListener('click', function () {
 });
 
 function updateDatingTime() {
-    const startDate = new Date("2023-06-01T00:00:00"); // Data de início com horário
+    const startDate = new Date("2023-06-01T00:00:00"); 
     const now = new Date();
     const diff = now - startDate;
     
@@ -21,17 +21,20 @@ function updateDatingTime() {
 }
 
 const images = [
-    { src: "img/ft.jpg", text: "Te amo mais do que consigo expressar. Sei que posso errar, mas nunca quis te magoar. Me desculpa" },
-    { src: "img/ft2.jpg", text: "Eu sei que nem sempre demonstro, mas gosto muito de você. Você é especial para mim e me desculpa por tudo, minha gata." },
-    { src: "img/ft3.jpg", text: "Mesmo que eu não diga o tempo todo, meu carinho por você é imenso. Você é incrível e eu só quero que saiba disso." }
+    { src: "img/ft.jpg", text: "Você é a pessoa mais especial do mundo para mim. Obrigado por estar ao meu lado! 💖" },
+    { src: "img/ft4.jpg", text: "Cada momento ao seu lado é precioso. Você é linda e ilumina minha vida!" },
+    { src: "img/ft5.jpg", text: "Sua presença transforma tudo ao meu redor. Sou grato por cada instante ao seu lado!" },
+    { src: "img/ft6.jpg", text: "Te amo mais do que consigo expressar. Você é incrível e quero te fazer feliz sempre!" },
+    { src: "img/ft2.jpg", text: "Você é única e insubstituível. Seu sorriso é meu maior presente!" },
+    { src: "img/ft3.jpg", text: "Minha vida é melhor porque você faz parte dela. Você é especial, linda e inesquecível!" }
 ];
 
 let currentIndex = 0;
 
 // Exibe o coração por 3 segundos antes de começar a troca de imagens
 setTimeout(() => {
-    document.getElementById('heart').style.display = 'none'; // Esconde o coração
-    document.getElementById('moment-img').style.display = 'block'; // Mostra a imagem
+    document.getElementById('heart').style.display = 'none';
+    document.getElementById('moment-img').style.display = 'block';
     document.getElementById('moment-img').src = images[currentIndex].src;
     document.getElementById('moment-text').innerText = images[currentIndex].text;
 
@@ -50,10 +53,9 @@ document.getElementById('play-btn').addEventListener('click', function () {
     const audio = document.getElementById('music');
     if (audio.paused) {
         audio.play();
-        this.innerText = "⏸️ Pause"; // Atualiza o botão
+        this.innerText = "⏸️ Pause"; 
     } else {
         audio.pause();
         this.innerText = "▶️ Play";
     }
 });
-
