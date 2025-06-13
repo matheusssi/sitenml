@@ -13,8 +13,12 @@ body {
 .container {
     max-width: 90%;
     width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza todos os elementos */
 }
 
+/* Estilização do botão */
 button {
     font-size: 5vw;
     padding: 2vw 4vw;
@@ -23,25 +27,35 @@ button {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
     background-color: #e91e63;
 }
 
-
-.moments img {
-    width: 100%;
-    max-width: 168px; /* Limite máximo de largura */
-    min-width: 158px; /* Limite mínimo de largura */
-    height: 150px; /* Altura fixa */
-    object-fit: cover; /* Mantém proporção sem esticar */
-    border-radius: 20px; /* Bordas arredondadas */
-    margin-top: 10px;
+/* Centralização dos momentos */
+.moments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px; /* Garante alinhamento adequado */
 }
 
+/* Ajuste no tamanho das imagens */
+.moments img {
+    width: 100%;
+    max-width: 168px;
+    min-width: 158px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 10px;
+    display: none; /* Começa escondido para ser ativado via JS */
+}
 
-
+/* Responsividade */
 @media (max-width: 600px) {
     body {
         flex-direction: column;
@@ -56,4 +70,33 @@ button:hover {
     .moments img {
         max-height: 250px;
     }
+}
+
+/* Coração estilizado */
+.heart {
+    font-size: 60px; /* Aumentei para dar mais destaque */
+    color: red;
+    text-align: center;
+    animation: pulse 1s infinite alternate;
+}
+
+/* Efeito de pulsação */
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
+#play-btn {
+    margin-top: 15px;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#play-btn:hover {
+    background-color: #e91e63;
 }
